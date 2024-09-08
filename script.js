@@ -10,13 +10,10 @@ const showSection = () => {
     });
 };
 
-window.addEventListener('scroll', () => {
-    if (window.innerWidth > 768) { // Apply only for larger devices
-        showSection();
-    }
-});
+// Directly bind scroll event without debounce
+window.addEventListener('scroll', showSection);
 
-// Back to Top Button
+// Back to Top Button functionality
 const backToTopBtn = document.querySelector('#backToTop');
 
 window.addEventListener('scroll', () => {
