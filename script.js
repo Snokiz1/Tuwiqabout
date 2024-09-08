@@ -10,7 +10,11 @@ const showSection = () => {
     });
 };
 
-window.addEventListener('scroll', showSection);
+window.addEventListener('scroll', () => {
+    if (window.innerWidth > 768) { // Apply only for larger devices
+        showSection();
+    }
+});
 
 // Back to Top Button
 const backToTopBtn = document.querySelector('#backToTop');
